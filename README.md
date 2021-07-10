@@ -491,7 +491,7 @@ Let's take a look at each type in details:
     ```
 <hr>
 
-### 6.Configure API Endpoints (`urls.py`)
+### 6. Configure API Endpoints (`urls.py`)
 
 Earlier, we have created a new `urls.py` inside our app. All we have to do next is to link the views we configured just now inside the file.
 
