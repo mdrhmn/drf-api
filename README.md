@@ -138,6 +138,7 @@ Finally, create new `urls.py` for the app (`app_name/urls.py`).
 ```Shell
 $ pip install djangorestframework
 ``` 
+<hr>
 
 ### 2. Configure `settings.py`
 
@@ -157,6 +158,7 @@ INSTALLED_APPS = [
     'app_name.apps.AppName',
 ]
 ```
+<hr>
 
 Next, we need to add `REST_FRAMEWORK` settings as follows. Descriptions of the settings as included for your quick reference.
 
@@ -210,6 +212,7 @@ REST_FRAMEWORK = {
 **[Browserable HTML API](https://www.django-rest-framework.org/topics/browsable-api/)** is the GUI that is included in DRF which allows users to interact with the API and for the API to return a fully web-browsable HTML representation. While this is useful, this should not be accessible during production as we do not want any user to **access the API without authentication** (more on authentication later in the guide). 
 
 Hence, we need to **override** the `DEFAULT_RENDERER_CLASSES` value from `'rest_framework.renderers.BrowsableAPIRenderer'` to `'rest_framework.renderers.JSONRenderer'` depending on which environment the web app is running at.
+<hr>
 
 ### 3. Create a Model
 
@@ -230,6 +233,7 @@ class Todo(models.Model):
 ```
 
 Refer to [this guide](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Models) for more information on Django Models.
+<hr>
 
 ### 4. Configure Serializers
 
@@ -250,7 +254,7 @@ There are 2 main types of serializers:
     The HyperlinkedModelSerializer class is similar to the ModelSerializer class except that it **uses hyperlinks** 
     to **represent relationships**, rather than primary keys.
 
-1. **ModelSerializer**
+2. **ModelSerializer**
    
     The ModelSerializer class provides a shortcut that lets you **automatically create a Serializer class** with 
     fields that **correspond** to the **Model fields**.
@@ -269,6 +273,7 @@ class TodoSerializer(serializers.ModelSerializer):
         # Shortcut for getting all fields
         fields = '__all__'
 ```
+<hr>
 
 ### 5. Configure Views (`views.py`)
 
@@ -464,6 +469,7 @@ Let's take a look at each type in details:
         queryset = Todo.objects.all()
         serializer_class = TodoSerializer
     ```
+<hr>
 
 ### 6. Configure API Endpoints (`urls.py`)
 
@@ -519,6 +525,7 @@ urlpatterns = [
 ```
 
 Note that regardless of which type of CBV you use, the **method of writing the URL pattern** is the **same**. The exact URL pattern is not fixed and can be customised to your preference. 
+<hr>
 
 ### 7. Test API Connection
 
@@ -724,6 +731,7 @@ X-Frame-Options: DENY
     "detail": "Authentication credentials were not provided."
 }
 ```
+<hr>
 
 ### 2. Authentication
 
