@@ -533,7 +533,8 @@ Run Django server using `python manage.py runserver` command then navigate to th
 
 You should be seeing something similar like this:
 
-[IMAGE]
+![Imgur Image](https://imgur.com/lB8zExw.png)
+![Imgur Image](https://imgur.com/x4VXpsW.png)
 
 The HTML you are seeing is the Browsable HTML API that we talked about earlier. You can click the 'GET' button to retrieve all Todo instances in our model as well filling in the 'POST' form and click the 'POST' button to submit a new Todo instance.
 
@@ -876,7 +877,7 @@ To install:
 
 Try to access the URLs upon running the Django server and you should see something similar as shown below:
 
-[IMAGE]
+![Imgur Image](https://imgur.com/UuNJEjh.png)
 
 ## References
 
