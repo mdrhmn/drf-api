@@ -1,12 +1,33 @@
 # Developing REST API Using Django REST Framework (DRF)
 
 ## Table of Contents
+
+- [Developing REST API Using Django REST Framework (DRF)](#developing-rest-api-using-django-rest-framework-drf)
+  - [Table of Contents](#table-of-contents)
+  - [Introduction](#introduction)
+  - [Setting Up Django](#setting-up-django)
+    - [1. Create new Django Project](#1-create-new-django-project)
+    - [2. Create new Virtual Environment](#2-create-new-virtual-environment)
+    - [3. Install PIP Dependencies](#3-install-pip-dependencies)
+    - [4. Start New Django App](#4-start-new-django-app)
+    - [5. Configure `settings.py`](#5-configure-settingspy)
+    - [5. Configure `urls.py`](#5-configure-urlspy)
+  - [Setting Up Django REST Framework](#setting-up-django-rest-framework)
+    - [1. Install Django REST Framework](#1-install-django-rest-framework)
+    - [2. Configure `settings.py`](#2-configure-settingspy)
+    - [3. Create a Model](#3-create-a-model)
+    - [4. Configure Serializers](#4-configure-serializers)
+    - [5. Configure Views (`views.py`)](#5-configure-views-viewspy)
+    - [7. Test API Connection](#7-test-api-connection)
+  - [Configure Permissions and Authentication](#configure-permissions-and-authentication)
+    - [1. Permissions](#1-permissions)
+    - [2. Authentication](#2-authentication)
+  - [API Documentation using `drf_spectacular`](#api-documentation-using-drf_spectacular)
+  - [References](#references)
   
 ## Introduction 
 
 This is a sample project for exploring the development of REST APIs using Django REST Framework (DRF).
-
-## Cloning The Repo
 
 ## Setting Up Django
 
