@@ -1,7 +1,6 @@
 # Developing REST API Using Django REST Framework (DRF)
 
 ## Table of Contents
-
 - [Developing REST API Using Django REST Framework (DRF)](#developing-rest-api-using-django-rest-framework-drf)
   - [Table of Contents](#table-of-contents)
   - [Introduction](#introduction)
@@ -11,13 +10,13 @@
     - [3. Install PIP Dependencies](#3-install-pip-dependencies)
     - [4. Start New Django App](#4-start-new-django-app)
     - [5. Configure `settings.py`](#5-configure-settingspy)
-    - [5. Configure `urls.py`](#5-configure-urlspy)
+    - [6. Configure `urls.py`](#6-configure-urlspy)
   - [Setting Up Django REST Framework](#setting-up-django-rest-framework)
     - [1. Install Django REST Framework](#1-install-django-rest-framework)
     - [2. Configure `settings.py`](#2-configure-settingspy)
     - [3. Create a Model](#3-create-a-model)
     - [4. Configure Serializers](#4-configure-serializers)
-    - [5. Configure Views (`views.py`)](#5-configure-views-viewspy)
+    - [5. Configure Views (`app_name/views.py`)](#5-configure-views-app_nameviewspy)
     - [7. Test API Connection](#7-test-api-connection)
   - [Configure Permissions and Authentication](#configure-permissions-and-authentication)
     - [1. Permissions](#1-permissions)
@@ -136,7 +135,7 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 ```
 <hr>
 
-### 5. Configure `urls.py`
+### 6. Configure `urls.py`
 
 Add desired URL for the app (`project_name/urls.py`)
 
@@ -296,7 +295,7 @@ class TodoSerializer(serializers.ModelSerializer):
 ```
 <hr>
 
-### 5. Configure Views (`views.py`)
+### 5. Configure Views (`app_name/views.py`)
 
 There are various ways to configure the views for the APIs. We can categorise them into 2 types:
 
@@ -492,7 +491,7 @@ Let's take a look at each type in details:
     ```
 <hr>
 
-### 6. Configure API Endpoints (`urls.py`)
+### 6.Configure API Endpoints (`urls.py`)
 
 Earlier, we have created a new `urls.py` inside our app. All we have to do next is to link the views we configured just now inside the file.
 
