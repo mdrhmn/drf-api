@@ -1,11 +1,11 @@
-from django.shortcuts import render
 from .models import *
 from .serializers import *
-from rest_framework.views import APIView
 from django.http import Http404
+from django.shortcuts import render
+from rest_framework.views import APIView
 from rest_framework.response import Response
-from rest_framework import generics, permissions, viewsets, status
 from django.contrib.auth.models import User, Group
+from rest_framework import generics, permissions, viewsets, status
 
 """
 Method 1: Generics
@@ -13,6 +13,16 @@ REST framework provides a set of already mixed-in generic class-based views that
 GenericViewSet inherits from GenericAPIView but does not provide any implementations of basic actions. Just only get_object, get_queryset.
 
 To create CRUD, Generics needs two classes(ListCreateAPIView and RetrieveUpdateDestroyAPIView.
+"""
+
+"""
+REST framework provides two wrappers you can use to write API views.
+
+1. The @api_view decorator for working with function based views.
+2. The APIView class for working with class-based views.
+
+These wrappers provide a few bits of functionality such as making sure you receive Request instances in your view, and adding context to 
+Response objects so that content negotiation can be performed.
 """
 
 """

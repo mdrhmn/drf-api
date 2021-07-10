@@ -1,6 +1,6 @@
 from . import views
-from django.urls import path, include
 from rest_framework import routers
+from django.urls import path, include
 # Rename views to avoid conflict with app views
 from rest_framework.authtoken import views as rest_views
 
@@ -31,6 +31,7 @@ urlpatterns = [
     # Include default login and logout views for use with the browsable API. 
     # Optional, but useful if your API requires authentication and you want to use the browsable API.
     path('api-auth/', include('rest_framework.urls', namespace='rest_framework')),
+    
     # API to generate auth token from user. Note that the URL part of the pattern can be whatever you want to use.
     path('api-token-auth/', rest_views.obtain_auth_token, name='api-token-auth'),
 
